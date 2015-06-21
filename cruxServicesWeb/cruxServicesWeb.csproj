@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AEAD9B1C-88E3-424F-B1D0-4F6925F20FCF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cruxServicesWeb</RootNamespace>
+    <AssemblyName>cruxServicesWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\cruxDB.mdf" />
+    <Content Include="App_Data\cruxDB_log.ldf">
+      <DependentUpon>cruxDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap3.02.min.css" />
+    <Content Include="Content\component.css" />
+    <Content Include="Content\datepicker.css" />
+    <Content Include="Content\fileinput.css" />
+    <Content Include="Content\fileinput.min.css" />
+    <Content Include="Content\font-awesome-4.2.0\css\font-awesome.css" />
+    <Content Include="Content\font-awesome-4.2.0\css\font-awesome.min.css" />
+    <Content Include="Content\font-awesome-4.2.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Images\bluesteps1.fw.png" />
+    <Content Include="Content\Images\frontsearch.fw.png" />
+    <Content Include="Content\Images\hardwood_may13.jpg" />
+    <Content Include="Content\Images\homepage\Categs\bath.fw.png" />
+    <Content Include="Content\Images\homepage\Categs\carp.fw.png" />
+    <Content Include="Content\Images\homepage\Categs\ele.fw.png" />
+    <Content Include="Content\Images\homepage\Categs\gard.fw.png" />
+    <Content Include="Content\Images\homepage\Categs\int.fw.png" />
+    <Content Include="Content\Images\homepage\Categs\mason.fw.png" />
+    <Content Include="Content\Images\homepage\Categs\mech.fw.png" />
+    <Content Include="Content\Images\homepage\Categs\roof.fw.png" />
+    <Content Include="Content\Images\homepage\step1.fw.png" />
+    <Content Include="Content\Images\homepage\step2.fw.png" />
+    <Content Include="Content\Images\homepage\step3.fw.png" />
+    <Content Include="Content\Images\Logo\logo.fw.png" />
+    <Content Include="Content\Images\Logo\logoblue.fw.png" />
+    <Content Include="Content\Images\plumber_masonry.jpg" />
+    <Content Include="Content\Images\plumbing-how-to-videos-a1-bargain-plumbing-youtube.jpg" />
+    <Content Include="Content\Images\Profile\coverpic.jpg" />
+    <Content Include="Content\Images\Profile\independentcoverpic.jpg" />
+    <Content Include="Content\Images\Profile\logo.png" />
+    <Content Include="Content\Images\Profile\porfolio.png" />
+    <Content Include="Content\Images\Signup\CanadaCleaning.jpg" />
+    <Content Include="Content\Images\Signup\niche-find.jpg" />
+    <Content Include="Content\LandingPage\css\animate.css" />
+    <Content Include="Content\LandingPage\css\bootstrap-theme.css" />
+    <Content Include="Content\LandingPage\css\bootstrap-theme.min.css" />
+    <Content Include="Content\LandingPage\css\bootstrap.css" />
+    <Content Include="Content\LandingPage\css\bootstrap.min.css" />
+    <Content Include="Content\LandingPage\css\flexslider.css" />
+    <Content Include="Content\LandingPage\css\queries.css" />
+    <Content Include="Content\LandingPage\css\styles.css" />
+    <Content Include="Content\LandingPage\img\bgoverlay.fw.png" />
+    <Content Include="Content\LandingPage\img\ft1.jpg" />
+    <Content Include="Content\LandingPage\img\ft2.jpg" />
+    <Content Include="Content\LandingPage\img\ft3.jpg" />
+    <Content Include="Content\LandingPage\img\ft4.jpg" />
+    <Content Include="Content\LandingPage\img\ft5.jpg" />
+    <Content Include="Content\LandingPage\img\ft6.jpg" />
+    <Content Include="Content\LandingPage\img\h1-bg.png" />
+    <Content Include="Content\LandingPage\img\hero-bg.jpg" />
+    <Content Include="Content\LandingPage\img\iphone-bg.png" />
+    <Content Include="Content\LandingPage\img\keyboard-bg.fw.png" />
+    <Content Include="Content\LandingPage\img\l1.jpg" />
+    <Content Include="Content\LandingPage\img\logogreen.fw.png" />
+    <Content Include="Content\LandingPage\img\plants-bg.fw.png" />
+    <Content Include="Content\LandingPage\img\portfolio-01.jpg" />
+    <Content Include="Content\LandingPage\img\portfolio-02.jpg" />
+    <Content Include="Content\LandingPage\img\portfolio-03.jpg" />
+    <Content Include="Content\LandingPage\img\ProviderInteraction.jpg" />
+    <Content Include="Content\LandingPage\img\RequestorInteraction.jpg" />
+    <Content Include="Content\LandingPage\img\sld1.fw.png" />
+    <Content Include="Content\LandingPage\img\sld2.fw.png" />
+    <Content Include="Content\LandingPage\img\slider3.fw.png" />
+    <Content Include="Content\LandingPage\img\slider4.fw.png" />
+    <Content Include="Content\LandingPage\img\slider5.fw.png" />
+    <Content Include="Content\LandingPage\img\team-01.png" />
+    <Content Include="Content\LandingPage\img\team-02.png" />
+    <Content Include="Content\LandingPage\img\team-03.png" />
+    <Content Include="Content\LandingPage\js\bootstrap.js" />
+    <Content Include="Content\LandingPage\js\bootstrap.min.js" />
+    <Content Include="Content\LandingPage\js\jquery.flexslider.js" />
+    <Content Include="Content\LandingPage\js\jquery.smooth-scroll.js" />
+    <Content Include="Content\LandingPage\js\min\scripts-ck.js" />
+    <Content Include="Content\LandingPage\js\modernizr.js" />
+    <Content Include="Content\LandingPage\js\overlay.js" />
+    <Content Include="Content\LandingPage\js\scripts.js" />
+    <Content Include="Content\LandingPage\js\waypoints.min.js" />
+    <Content Include="Content\LandingPage\slider\css\slideranimate.css" />
+    <Content Include="Content\LandingPage\slider\css\bootslider.css" />
+    <Content Include="Content\LandingPage\slider\css\bs-layout-fixedheight.css" />
+    <Content Include="Content\LandingPage\slider\css\bs-template-product.css" />
+    <Content Include="Content\LandingPage\slider\css\bs-theme-metro.css" />
+    <Content Include="Content\LandingPage\slider\css\bs-theme-minimalistic.css" />
+    <Content Include="Content\LandingPage\slider\js\bootslider.js" />
+    <Content Include="Content\LandingPage\slider\js\fitvids.js" />
+    <Content Include="Content\LandingPage\slider\js\mousewheel.js" />
+    <Content Include="Content\LandingPage\slider\js\touchSwipe.js" />
+    <Content Include="Content\LandingPage\slider\loader.gif" />
+    <Content Include="Content\LoginPage\login-bg.png" />
+    <Content Include="Content\LoginPage\quote-bg.fw.png" />
+    <Content Include="Content\LoginPage\quotestyle.css" />
+    <Content Include="Content\LoginPage\loginstyle.css" />
+    <Content Include="Content\QuotationPage\Quotationscript.js" />
+    <Content Include="Content\QuotationPage\Quotationstyle.css" />
+    <Content Include="Content\QuotationPage\SimplifiedQuotationStyle.css" />
+    <Content Include="Content\SearchAndFilterPage\css\reset.css" />
+    <Content Include="Content\SearchAndFilterPage\css\style.css" />
+    <Content Include="Content\SearchAndFilterPage\img\cd-icon-arrow.svg" />
+    <Content Include="Content\SearchAndFilterPage\img\cd-icon-check.svg" />
+    <Content Include="Content\SearchAndFilterPage\img\cd-icon-filter.svg" />
+    <Content Include="Content\SearchAndFilterPage\img\ratingDisplay.jpg" />
+    <Content Include="Content\SearchAndFilterPage\js\jquery-2.1.1.js" />
+    <Content Include="Content\SearchAndFilterPage\js\jquery.mixitup.min.js" />
+    <Content Include="Content\SearchAndFilterPage\js\main.js" />
+    <Content Include="Content\SearchAndFilterPage\js\modernizr.js" />
+    <Content Include="Content\Signupstyle.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\star-rating.css" />
+    <Content Include="Content\star-rating.min.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Feedback.aspx" />
+    <Content Include="FileSystem\PortFolio\carpPort1.jpg" />
+    <Content Include="FileSystem\PortFolio\carpPort2.jpg" />
+    <Content Include="FileSystem\PortFolio\carpPort3.jpg" />
+    <Content Include="FileSystem\PortFolio\carpPort4.jpg" />
+    <Content Include="FileSystem\PortFolio\carpPort5.jpg" />
+    <Content Include="FileSystem\PortFolio\carpPort6.jpg" />
+    <Content Include="FileSystem\PortFolio\elecPort1.jpg" />
+    <Content Include="FileSystem\PortFolio\elecPort2.jpg" />
+    <Content Include="FileSystem\PortFolio\elecPort3.jpg" />
+    <Content Include="FileSystem\PortFolio\elecPort4.jpg" />
+    <Content Include="FileSystem\PortFolio\elecPort5.png" />
+    <Content Include="FileSystem\PortFolio\elecPort6.jpg" />
+    <Content Include="FileSystem\PortFolio\elecPort7.jpg" />
+    <Content Include="FileSystem\PortFolio\masPort1.jpg" />
+    <Content Include="FileSystem\PortFolio\masPort2.jpg" />
+    <Content Include="FileSystem\PortFolio\masPort3.jpg" />
+    <Content Include="FileSystem\PortFolio\masPort4.jpg" />
+    <Content Include="FileSystem\PortFolio\masPort5.jpg" />
+    <Content Include="FileSystem\PortFolio\masPort6.jpg" />
+    <Content Include="FileSystem\PortFolio\plumbPort1.jpg" />
+    <Content Include="FileSystem\PortFolio\plumbPort2.jpeg" />
+    <Content Include="FileSystem\PortFolio\plumbPort3.jpg" />
+    <Content Include="FileSystem\PortFolio\plumbPort4.jpg" />
+    <Content Include="FileSystem\PortFolio\plumbPort5.jpg" />
+    <Content Include="FileSystem\PortFolio\plumbPort6.jpg" />
+    <Content Include="FileSystem\ProbPics\carpProb1.jpg" />
+    <Content Include="FileSystem\ProbPics\plumbProb1.jpg" />
+    <Content Include="FileSystem\ProbPics\plumbProb2.jpg" />
+    <Content Include="FileSystem\ProfilePic\Alexis.jpg" />
+    <Content Include="FileSystem\ProfilePic\Arjuna.jpg" />
+    <Content Include="FileSystem\ProfilePic\BusinessLogos\BoeiraConst.jpg" />
+    <Content Include="FileSystem\ProfilePic\BusinessLogos\MendisFur.jpg" />
+    <Content Include="FileSystem\ProfilePic\BusinessLogos\QuaWaters.jpg" />
+    <Content Include="FileSystem\ProfilePic\Carter.jpg" />
+    <Content Include="FileSystem\ProfilePic\ChrisRonaldo.jpeg" />
+    <Content Include="FileSystem\ProfilePic\Clarke.jpg" />
+    <Content Include="FileSystem\ProfilePic\Clint.jpg" />
+    <Content Include="FileSystem\ProfilePic\Default.jpg" />
+    <Content Include="FileSystem\ProfilePic\Dinesh.jpg" />
+    <Content Include="FileSystem\ProfilePic\GerPique.jpg" />
+    <Content Include="FileSystem\ProfilePic\Gotze.jpg" />
+    <Content Include="FileSystem\ProfilePic\Hayden.jpg" />
+    <Content Include="FileSystem\ProfilePic\Irfan007.jpg" />
+    <Content Include="FileSystem\ProfilePic\John.jpg" />
+    <Content Include="FileSystem\ProfilePic\Kingmen.jpg" />
+    <Content Include="FileSystem\ProfilePic\Kumar.jpg" />
+    <Content Include="FileSystem\ProfilePic\Lasith.jpg" />
+    <Content Include="FileSystem\ProfilePic\Leonardo.jpg" />
+    <Content Include="FileSystem\ProfilePic\Liam.jpg" />
+    <Content Include="FileSystem\ProfilePic\Lionel.jpg" />
+    <Content Include="FileSystem\ProfilePic\Mahela.jpg" />
+    <Content Include="FileSystem\ProfilePic\Merlin.jpg" />
+    <Content Include="FileSystem\ProfilePic\MesOzil.png" />
+    <Content Include="FileSystem\ProfilePic\Oliver.png" />
+    <Content Include="FileSystem\ProfilePic\Peter.jpg" />
+    <Content Include="FileSystem\ProfilePic\Ricky.jpg" />
+    <Content Include="FileSystem\ProfilePic\Sanath.jpg" />
+    <Content Include="FileSystem\ProfilePic\Shah.jpg" />
+    <Content Include="FileSystem\ProfilePic\Vijay.jpg" />
+    <Content Include="FileSystem\ProfilePic\Vikram.jpg" />
+    <Content Include="FileSystem\ProfilePic\Wayne.jpg" />
+    <Content Include="FileSystem\ProfilePic\WayRooney.jpg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="FileSystem\ProfilePic\Lema.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="Profiles\assets\css\bootstrap.css" />
+    <Content Include="Profiles\assets\css\style-responsive.css" />
+    <Content Include="Profiles\assets\css\style.css" />
+    <Content Include="Profiles\assets\css\table-responsive.css" />
+    <Content Include="Profiles\assets\css\to-do.css" />
+    <Content Include="Profiles\assets\css\zabuto_calendar.css" />
+    <Content Include="Profiles\assets\font-awesome\css\font-awesome.css" />
+    <Content Include="Profiles\assets\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Profiles\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Profiles\assets\img\blog-bg.jpg" />
+    <Content Include="Profiles\assets\img\checkbox-gray.png" />
+    <Content Include="Profiles\assets\img\friends\fr-01.jpg" />
+    <Content Include="Profiles\assets\img\friends\fr-02.jpg" />
+    <Content Include="Profiles\assets\img\friends\fr-03.jpg" />
+    <Content Include="Profiles\assets\img\friends\fr-04.jpg" />
+    <Content Include="Profiles\assets\img\friends\fr-05.jpg" />
+    <Content Include="Profiles\assets\img\friends\fr-06.jpg" />
+    <Content Include="Profiles\assets\img\friends\fr-07.jpg" />
+    <Content Include="Profiles\assets\img\friends\fr-08.jpg" />
+    <Content Include="Profiles\assets\img\friends\fr-09.jpg" />
+    <Content Include="Profiles\assets\img\friends\fr-10.jpg" />
+    <Content Include="Profiles\assets\img\friends\fr-11.jpg" />
+    <Content Include="Profiles\assets\img\instagram.jpg" />
+    <Content Include="Profiles\assets\img\login-bg.jpg" />
+    <Content Include="Profiles\assets\img\lorde.jpg" />
+    <Content Include="Profiles\assets\img\mask.png" />
+    <Content Include="Profiles\assets\img\ny.jpg" />
+    <Content Include="Profiles\assets\img\portfolio\port01.jpg" />
+    <Content Include="Profiles\assets\img\portfolio\port02.jpg" />
+    <Content Include="Profiles\assets\img\portfolio\port03.jpg" />
+    <Content Include="Profiles\assets\img\portfolio\port04.jpg" />
+    <Content Include="Profiles\assets\img\portfolio\port05.jpg" />
+    <Content Include="Profiles\assets\img\portfolio\port06.jpg" />
+    <Content Include="Profiles\assets\img\product.jpg" />
+    <Content Include="Profiles\assets\img\product.png" />
+    <Content Include="Profiles\assets\img\profile-01.jpg" />
+    <Content Include="Profiles\assets\img\profile-02.jpg" />
+    <Content Include="Profiles\assets\img\radio-gray.png" />
+    <Content Include="Profiles\assets\img\ui-danro.jpg" />
+    <Content Include="Profiles\assets\img\ui-divya.jpg" />
+    <Content Include="Profiles\assets\img\ui-sam.jpg" />
+    <Content Include="Profiles\assets\img\ui-sherman.jpg" />
+    <Content Include="Profiles\assets\img\ui-zac.jpg" />
+    <Content Include="Profiles\assets\img\weather.jpg" />
+    <Content Include="Profiles\assets\img\zoom.png" />
+    <Content Include="Profiles\assets\js\bootstrap-inputmask\bootstrap-inputmask.min.js" />
+    <Content Include="Profiles\assets\js\bootstrap-switch.js" />
+    <Content Include="Profiles\assets\js\bootstrap.min.js" />
+    <Content Include="Profiles\assets\js\calendar-conf-events.js" />
+    <Content Include="Profiles\assets\js\chart-master\Chart.js" />
+    <Content Include="Profiles\assets\js\chartjs-conf.js" />
+    <Content Include="Profiles\assets\js\common-scripts.js" />
+    <Content Include="Profiles\assets\js\easy-pie-chart.js" />
+    <Content Include="Profiles\assets\js\fancybox\jquery.fancybox.css" />
+    <Content Include="Profiles\assets\js\fancybox\jquery.fancybox.js" />
+    <Content Include="Profiles\assets\js\form-component.js" />
+    <Content Include="Profiles\assets\js\fullcalendar\bootstrap-fullcalendar.css" />
+    <Content Include="Profiles\assets\js\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Profiles\assets\js\gritter-conf.js" />
+    <Content Include="Profiles\assets\js\gritter\css\jquery.gritter.css" />
+    <Content Include="Profiles\assets\js\gritter\css\jquery.gritter0.css" />
+    <Content Include="Profiles\assets\js\gritter\images\gritter-light.png" />
+    <Content Include="Profiles\assets\js\gritter\images\gritter-long.png" />
+    <Content Include="Profiles\assets\js\gritter\images\gritter.png" />
+    <Content Include="Profiles\assets\js\gritter\images\ie-spacer.gif" />
+    <Content Include="Profiles\assets\js\gritter\js\jquery.gritter.js" />
+    <Content Include="Profiles\assets\js\jquery-1.8.3.min.js" />
+    <Content Include="Profiles\assets\js\jquery-easy-pie-chart\jquery.easy-pie-chart.css" />
+    <Content Include="Profiles\assets\js\jquery-easy-pie-chart\jquery.easy-pie-chart.js" />
+    <Content Include="Profiles\assets\js\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="Profiles\assets\js\jquery.backstretch.min.js" />
+    <Content Include="Profiles\assets\js\jquery.dcjqaccordion.2.7.js" />
+    <Content Include="Profiles\assets\js\jquery.js" />
+    <Content Include="Profiles\assets\js\jquery.nicescroll.js" />
+    <Content Include="Profiles\assets\js\jquery.scrollTo.min.js" />
+    <Content Include="Profiles\assets\js\jquery.sparkline.js" />
+    <Content Include="Profiles\assets\js\jquery.tagsinput.js" />
+    <Content Include="Profiles\assets\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="Profiles\assets\js\morris-conf.js" />
+    <Content Include="Profiles\assets\js\sparkline-chart.js" />
+    <Content Include="Profiles\assets\js\tasks.js" />
+    <Content Include="Profiles\assets\js\zabuto_calendar.js" />
+    <Content Include="Profiles\assets\lineicons\fonts\linecons.svg" />
+    <Content Include="Profiles\assets\lineicons\index.html" />
+    <Content Include="Profiles\assets\lineicons\lte-ie7.js" />
+    <Content Include="Profiles\assets\lineicons\style.css" />
+    <Content Include="Profiles\BusinessProfile.aspx" />
+    <Content Include="Profiles\historyTimeline\css\hTimelinestyle.css" />
+    <Content Include="Profiles\historyTimeline\js\hTimeLinemain.js" />
+    <Content Include="Profiles\historyTimeline\js\modernizr.js" />
+    <Content Include="Profiles\RequestorProfile.aspx" />
+    <Content Include="Profiles\SPProfile.aspx" />
+    <Content Include="Quotation.aspx" />
+    <Content Include="Registration\Registration-Business.aspx" />
+    <Content Include="Registration\Requestor_reg.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\fileinput.js" />
+    <Content Include="Scripts\fileinput.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\LandingPage\css\.DS_Store" />
+    <Content Include="Content\LandingPage\css\bootstrap-theme.css.map" />
+    <Content Include="Content\LandingPage\css\bootstrap.css.map" />
+    <Content Include="Content\LandingPage\img\.DS_Store" />
+    <Content Include="Content\LandingPage\js\.DS_Store" />
+    <Content Include="Content\LandingPage\js\min\.DS_Store" />
+    <Content Include="Content\SearchAndFilterPage\js\.DS_Store" />
+    <Content Include="Content\SearchAndFilterPage\js\mixitup-LICENSE.md" />
+    <Content Include="Profiles\assets\.DS_Store" />
+    <Content Include="Profiles\assets\css\.DS_Store" />
+    <Content Include="Profiles\assets\font-awesome\.DS_Store" />
+    <Content Include="Profiles\assets\font-awesome\css\.DS_Store" />
+    <Content Include="Profiles\assets\font-awesome\fonts\.DS_Store" />
+    <Content Include="Profiles\assets\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Profiles\assets\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Profiles\assets\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Profiles\assets\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Profiles\assets\fonts\.DS_Store" />
+    <Content Include="Profiles\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Profiles\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Profiles\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Profiles\assets\img\.DS_Store" />
+    <Content Include="Profiles\assets\img\friends\.DS_Store" />
+    <Content Include="Profiles\assets\img\portfolio\.DS_Store" />
+    <Content Include="Profiles\assets\js\.DS_Store" />
+    <Content Include="Profiles\assets\js\bootstrap-inputmask\.DS_Store" />
+    <Content Include="Profiles\assets\js\chart-master\.DS_Store" />
+    <Content Include="Profiles\assets\js\fancybox\.DS_Store" />
+    <Content Include="Profiles\assets\js\fullcalendar\.DS_Store" />
+    <Content Include="Profiles\assets\js\gritter\.DS_Store" />
+    <Content Include="Profiles\assets\js\gritter\css\.DS_Store" />
+    <Content Include="Profiles\assets\js\gritter\images\.DS_Store" />
+    <Content Include="Profiles\assets\js\gritter\js\.DS_Store" />
+    <Content Include="Profiles\assets\js\jquery-easy-pie-chart\.DS_Store" />
+    <Content Include="Profiles\assets\lineicons\.DS_Store" />
+    <Content Include="Profiles\assets\lineicons\fonts\.DS_Store" />
+    <Content Include="Profiles\assets\lineicons\fonts\linecons.eot" />
+    <Content Include="Profiles\assets\lineicons\fonts\linecons.ttf" />
+    <Content Include="Profiles\assets\lineicons\fonts\linecons.woff" />
+    <Content Include="Profiles\historyTimeline\js\.DS_Store" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\formValidation.min.js" />
+    <Content Include="Scripts\jquery-1.10.1.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\modernizr.custom.js" />
+    <Content Include="Scripts\repeatable-fields.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\star-rating.js" />
+    <Content Include="Scripts\star-rating.min.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Search.aspx" />
+    <Content Include="Registration\SPReg.aspx" />
+    <Content Include="Signup.aspx" />
+    <Content Include="test.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profiles\BusinessProfile.aspx.cs">
+      <DependentUpon>BusinessProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profiles\BusinessProfile.aspx.designer.cs">
+      <DependentUpon>BusinessProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profiles\RequestorProfile.aspx.cs">
+      <DependentUpon>RequestorProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profiles\RequestorProfile.aspx.designer.cs">
+      <DependentUpon>RequestorProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profiles\SPProfile.aspx.cs">
+      <DependentUpon>SPProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profiles\SPProfile.aspx.designer.cs">
+      <DependentUpon>SPProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quotation.aspx.cs">
+      <DependentUpon>Quotation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quotation.aspx.designer.cs">
+      <DependentUpon>Quotation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Registration-Business.aspx.cs">
+      <DependentUpon>Registration-Business.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Registration-Business.aspx.designer.cs">
+      <DependentUpon>Registration-Business.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Requestor_reg.aspx.cs">
+      <DependentUpon>Requestor_reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\Requestor_reg.aspx.designer.cs">
+      <DependentUpon>Requestor_reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\SPReg.aspx.cs">
+      <DependentUpon>SPReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\SPReg.aspx.designer.cs">
+      <DependentUpon>SPReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Signup.aspx.cs">
+      <DependentUpon>Signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Signup.aspx.designer.cs">
+      <DependentUpon>Signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font-awesome-4.2.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\font-awesome-4.2.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\font-awesome-4.2.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\font-awesome-4.2.0\fonts\FontAwesome.otf" />
+    <Content Include="Content\font-awesome-4.2.0\less\bordered-pulled.less" />
+    <Content Include="Content\font-awesome-4.2.0\less\core.less" />
+    <Content Include="Content\font-awesome-4.2.0\less\fixed-width.less" />
+    <Content Include="Content\font-awesome-4.2.0\less\font-awesome.less" />
+    <Content Include="Content\font-awesome-4.2.0\less\icons.less" />
+    <Content Include="Content\font-awesome-4.2.0\less\larger.less" />
+    <Content Include="Content\font-awesome-4.2.0\less\list.less" />
+    <Content Include="Content\font-awesome-4.2.0\less\mixins.less" />
+    <Content Include="Content\font-awesome-4.2.0\less\path.less" />
+    <Content Include="Content\font-awesome-4.2.0\less\rotated-flipped.less" />
+    <Content Include="Content\font-awesome-4.2.0\less\spinning.less" />
+    <Content Include="Content\font-awesome-4.2.0\less\stacked.less" />
+    <Content Include="Content\font-awesome-4.2.0\less\variables.less" />
+    <Content Include="Content\font-awesome-4.2.0\scss\font-awesome.scss" />
+    <Content Include="Content\font-awesome-4.2.0\scss\_bordered-pulled.scss" />
+    <Content Include="Content\font-awesome-4.2.0\scss\_core.scss" />
+    <Content Include="Content\font-awesome-4.2.0\scss\_fixed-width.scss" />
+    <Content Include="Content\font-awesome-4.2.0\scss\_icons.scss" />
+    <Content Include="Content\font-awesome-4.2.0\scss\_larger.scss" />
+    <Content Include="Content\font-awesome-4.2.0\scss\_list.scss" />
+    <Content Include="Content\font-awesome-4.2.0\scss\_mixins.scss" />
+    <Content Include="Content\font-awesome-4.2.0\scss\_path.scss" />
+    <Content Include="Content\font-awesome-4.2.0\scss\_rotated-flipped.scss" />
+    <Content Include="Content\font-awesome-4.2.0\scss\_spinning.scss" />
+    <Content Include="Content\font-awesome-4.2.0\scss\_stacked.scss" />
+    <Content Include="Content\font-awesome-4.2.0\scss\_variables.scss" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cruxServicesClasses\cruxServicesClasses.csproj">
+      <Project>{c0d50467-e2e8-4b02-9a0a-92668cba350a}</Project>
+      <Name>cruxServicesClasses</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4491</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2534/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

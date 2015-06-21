@@ -1,0 +1,47 @@
+﻿/*LOGIN CONFIGURATION PAGE*/
+body {
+    margin-top:60px;
+    background: url('quote-bg.fw.png') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+.form-login {
+	max-width: 700px;
+	margin:auto;
+	background:rgba(52, 73, 94, 0.7);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.form-login h2.form-login-heading {
+    padding:10px;
+	margin: 0;
+	text-align: center;
+	background: #1ABC9C;
+	border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	color: #fff;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+.login-wrap {
+	padding: 10px;
+}
+.login-wrap .registration {
+	text-align: center;
+}
+.login-social-link {
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+.btn-theme {
+    color:white;
+    background-color:#1ABC9C;
+}
+.centered {
+	text-align: center;
+}

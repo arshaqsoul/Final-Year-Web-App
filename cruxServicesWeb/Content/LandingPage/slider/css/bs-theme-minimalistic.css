@@ -1,0 +1,110 @@
+/*
+    Theme: Metro UI
+
+    Plugin: Bootslider
+    Plugin Website: http://themes.grozav.com/bootslider
+
+    Author: Alex GROZAV
+    Author Website: http://grozav.com
+*/
+.bootslider .bs-container .bs-slide .bs-foreground .heading {
+  font-weight: 300; }
+.bootslider .bs-progress {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0; }
+.bootslider .bs-thumbnails {
+  z-index: 0;
+  position: relative; }
+  .bootslider .bs-thumbnails ul .bs-thumbnail {
+    margin: 0 0 20px 0; }
+    .bootslider .bs-thumbnails ul .bs-thumbnail img {
+      filter: alpha(opacity=30);
+      -moz-opacity: 0.3;
+      -khtml-opacity: 0.3;
+      opacity: 0.3; }
+  .bootslider .bs-thumbnails ul .active img {
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1; }
+.bootslider .bs-pagination {
+  z-index: 99;
+  right: 0;
+  margin: 0 0 20px 0;
+  position: absolute; }
+  .bootslider .bs-pagination ul {
+    margin: -70px 50px 0 0; }
+    @media screen and (max-width: 767px) {
+      .bootslider .bs-pagination ul {
+        margin: -30px 20px 0 0; } }
+    .bootslider .bs-pagination ul li {
+      margin: 0 5px;
+      width: 15px;
+      height: 15px;
+      line-height: 20px; }
+      @media screen and (max-width: 767px) {
+        .bootslider .bs-pagination ul li {
+          width: 7px;
+          height: 7px;
+          line-height: 10px; } }
+      .bootslider .bs-pagination ul li a {
+        position: absolute;
+        margin: -5px 0 0 0;
+        border-radius: 100%;
+        -moz-border-radius: 100%;
+        -webkit-border-radius: 100%;
+        background: #fff;
+        text-indent: -10000px;
+        width: 15px;
+        height: 15px;
+        display: block;
+        filter: alpha(opacity=50);
+        -moz-opacity: 0.5;
+        -khtml-opacity: 0.5;
+        opacity: 0.5; }
+        @media screen and (max-width: 767px) {
+          .bootslider .bs-pagination ul li a {
+            width: 7px;
+            height: 7px;
+            margin: -3px 0 0 0; } }
+  .bootslider .bs-pagination .active {
+    width: 20px;
+    height: 20px; }
+    @media screen and (max-width: 767px) {
+      .bootslider .bs-pagination .active {
+        width: 10px;
+        height: 10px; } }
+    .bootslider .bs-pagination .active a {
+      margin: -2px 0 0 0;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      filter: alpha(opacity=100);
+      -moz-opacity: 1;
+      -khtml-opacity: 1;
+      opacity: 1; }
+      @media screen and (max-width: 767px) {
+        .bootslider .bs-pagination .active a {
+          width: 10px;
+          height: 10px; } }
+.bootslider .bs-controls {
+  width: 100px;
+  z-index: 99;
+  font-size: 48px;
+  position: absolute;
+  display: block;
+  margin: -100px 0  0 50px; }
+  @media screen and (max-width: 767px) {
+    .bootslider .bs-controls {
+      width: 40px;
+      font-size: 24px;
+      margin: -40px 0  0 20px; } }
+  .bootslider .bs-controls .bs-next {
+    display: block;
+    color: #fff;
+    float: right; }
+  .bootslider .bs-controls .bs-prev {
+    display: block;
+    color: #fff;
+    float: left; }
